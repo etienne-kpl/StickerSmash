@@ -6,6 +6,7 @@ import * as MediaLibrary from "expo-media-library";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from "react-native-view-shot";
 import domtoimage from "dom-to-image";
+import * as SplashScreen from "expo-splash-screen";
 
 import ImageViewer from "./components/ImageViewer";
 import Button from "./components/Button";
@@ -125,7 +126,7 @@ export default function App() {
           />
         </View>
       )}
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
